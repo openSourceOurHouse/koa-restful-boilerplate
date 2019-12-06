@@ -19,5 +19,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
-      if: ${{env.BRANCH_NAME}}
+      if: env.BRANCH_NAME=='master'
       run: echo ${{env.BRANCH_NAME}}
